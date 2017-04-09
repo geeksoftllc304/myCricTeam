@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate-mapping Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="myCriceTeam.actionForm.AcEntity" table="ArchivedContests">
+		<meta attribute="class-description">
+			This class contains the ArchivedContests mapping.
+		</meta>
+
+		<id name="entityID" type="int" column="EntityID">
+			<generator class="sequence" />
+		</id>
+
+		<property name="date" type="string" column="Match_Date" />
+		<property name="matchNumber" type="int" column="Match_Number"  />
+		<property name="team1" type="string" column="Team1" />
+		<property name="team2" type="string" column="Team2"  />
+		<property name="prizeValue" type="int" column="PrizeValue"  />
+	</class>
+	
+	<class name="myCriceTeam.actionForm.FinalRanksEntity" table="FinalRanks">
+		<meta attribute="class-description">
+			This class contains the Final Ranks mapping.
+		</meta>
+
+		<id name="rank" type="int" column="RANK">
+			 <generator class="sequence" /> 
+		</id>
+
+		<property name="entityId" type="int" column="Entity_ID" />
+		<property name="playerId" type="int" column="Player_ID"  />
+		<property name="score" type="int" column="SCORE"  />
+		<property name="playerName" type="string" column="Player_Name" />
+		<property name="submissionTime" type="string" column="SUBMISSION_TIME"  />
+		
+	</class>
+
+</hibernate-mapping>

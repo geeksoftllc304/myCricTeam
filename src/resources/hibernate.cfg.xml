@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"=//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+   
+<hibernate-configuration>
+	
+	<session-factory>
+	
+		
+		<!-- Database Dialect & Driver for Oracle 9G-->
+		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property> 
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		 
+		<!-- Database Details-->
+		<property name="connection.username">sys as sysdba</property>
+		<property name="connection.password">Ravali123</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521/ORCL</property>
+		<property name="connection.pool_size">10</property>
+		<!-- <property name="hibernate.default_schema"></property> -->
+		 
+		<!-- Additional Properties -->
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto"></property>	
+	
+	<!--<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property> -->
+  <!--  <property name="hibernate.jdbc.lob.non_contextual_creation">true</property> -->
+	
+	
+	
+	<mapping  resource = "/myCriceTeam/actionForm/AcEntity.hbm.xml" />
+	<!-- <mapping  resource = "/myCriceTeam/actionForm/FREntity.hbm.xml" /> -->
+	
+	
+	</session-factory>
+	
+</hibernate-configuration>
